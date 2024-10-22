@@ -62,12 +62,13 @@ public class CustomListTest {
     @Test
     void testDelete() {
         list = MockCityList();
+        int listSize = list.getCount();
         City city = new City("Cornwall", "Ontario");
         list.addCity(city);
         City city2 = new City("Aldergrove", "British Columbia");
         list.addCity(city2);
         list.delete(city);
-        assertEquals(2, list.getCount());
+        assertEquals(listSize + 1, list.getCount());
         assertFalse(list.hasCity(city));
     }
 }
