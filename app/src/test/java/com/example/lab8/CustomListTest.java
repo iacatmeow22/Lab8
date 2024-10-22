@@ -71,4 +71,20 @@ public class CustomListTest {
         assertEquals(listSize + 1, list.getCount());
         assertFalse(list.hasCity(city));
     }
+
+    /**
+     * increase the list by adding a new city
+     * add another city
+     * check if our current size matches the initial size plus two
+     */
+    @Test
+    void testCountCities() {
+        list = MockCityList();
+        int listSize = list.getCount();
+        City city = new City("Regina", "Saskatchewan");
+        list.addCity(city);
+        City city2 = new City("Bolbeau", "Quebec");
+        list.addCity(city2);
+        asserEquals(listSize + 2, list.countCities());
+    }
 }
