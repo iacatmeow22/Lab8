@@ -76,6 +76,12 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city
      */
     public void delete(City city) {
+        int cityIndex;
+
+        if (cities.contains(city)) {
+            cityIndex = cities.indexOf(city);
+            cities.remove(cityIndex);
+        }
     }
 
 
