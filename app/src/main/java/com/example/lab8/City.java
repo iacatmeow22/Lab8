@@ -17,4 +17,24 @@ public class City {
     String getProvinceName(){
         return this.province;
     }
+
+    /**
+     * Compares two strings
+     * @param o
+     * This is the candidate object to compare to
+     * @return
+     * Return true or false depending on equality of strings
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        City cityEqual = (City) o;
+        return city.equals(cityEqual.city) &&
+                province.equals(cityEqual.province);
+    }
 }
