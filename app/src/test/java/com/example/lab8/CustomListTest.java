@@ -67,7 +67,7 @@ public class CustomListTest {
         City city2 = new City("Aldergrove", "British Columbia");
         list.addCity(city2);
         list.delete(city);
-        assertEquals(2, list.getCities().size());
-        assertFalse(list.getCities().contains(city));
+        assertEquals(2, list.getCount());
+        assertFalse(list.hasCity(city));
     }
 }
