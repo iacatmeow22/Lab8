@@ -85,6 +85,6 @@ public class CustomListTest {
         list.addCity(city);
         City city2 = new City("Bolbeau", "Quebec");
         list.addCity(city2);
-        asserEquals(listSize + 2, list.countCities());
+        assertEquals(listSize + 2, list.countCities());
     }
 }
