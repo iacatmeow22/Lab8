@@ -52,4 +52,22 @@ public class CustomListTest {
         assertFalse(list.hasCity(city2));
     }
 
+    /**
+     * increase the list by adding a new city
+     * add another city
+     * remove the first city
+     * check if our current size matches the initial size plus one
+     * check if list contains city
+     */
+    @Test
+    void testDelete() {
+        list = MockCityList();
+        City city = new City("Cornwall", "Ontario");
+        list.addCity(city);
+        City city2 = new City("Aldergrove", "British Columbia");
+        list.addCity(city2);
+        list.delete(city);
+        assertEquals(2, list.getCities().size());
+        assertFalse(list.getCities().contains(city));
+    }
 }
